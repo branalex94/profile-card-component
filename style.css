@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: 18px;
+}
+
+:root {
+  /* Custom font family */
+  --font-family: "Kumbh Sans", sans-serif;
+  /* Primary colors */
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  /* Neutral colors */
+  --Dark-gray: hsl(0, 0%, 59%);
+  --font-size: 18px;
+  --wrapper-color: hsl(100, 100%, 100%);
+}
+
+body {
+  background-color: var(--Dark-cyan);
+  background-image: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-position: top -25rem left -36rem, right -37rem bottom -30rem;
+  background-repeat: no-repeat;
+  background-size: 50rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 80vw;
+  margin: 10% auto 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: var(--wrapper-color);
+}
+
+.profile__top {
+  position: relative;
+  width: 100%;
+}
+
+.profile__top__picture {
+  position: absolute;
+  left: 35%;
+  bottom: -2.5rem;
+  border-radius: 3rem;
+  outline: 0.4rem solid var(--wrapper-color);
+}
+
+.profile__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.profile__bottom__name,
+.profile__bottom__stats__container__header {
+  color: var(--Very-dark-desaturated-blue);
+}
+
+.profile__bottom__age {
+  color: var(--Dark-gray);
+  font-weight: normal;
+}
+
+.profile__bottom__stats__container {
+  text-align: center;
+}
+
+.profile__bottom__city,
+.profile__bottom__stats__container__title {
+  color: var(--Dark-gray);
+  font-size: 0.7rem;
+}
+
+.profile__bottom__city {
+  margin: 0.5rem 0 2rem;
+}
+
+.profile__bottom__stats {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.profile__bottom__underline {
+  width: 20rem;
+  border-bottom: 0.1rem solid var(--Dark-gray);
+  position: absolute;
+  top: -1rem;
+  left: -2rem;
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-position: top -25rem left -36rem, right -37rem bottom -30rem;
+  }
+  .wrapper {
+    max-width: 16rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-position: top -25rem left -12rem, right -11rem bottom -36rem;
+  }
+}
